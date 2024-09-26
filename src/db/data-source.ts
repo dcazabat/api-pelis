@@ -1,7 +1,8 @@
 import 'dotenv/config'
-import { User } from '../user/entities/user.entity'
 import { DataSource, DataSourceOptions } from "typeorm"
 import { SSL_CERT } from './ssl-config'
+import { User } from '../user/entities/user.entity'
+import { Favorite } from '../favorites/entities/favorite.entity'
 
 export const dataSourceOptions: DataSourceOptions = {
     type: process.env.DB_TYPE as any,
@@ -13,7 +14,7 @@ export const dataSourceOptions: DataSourceOptions = {
     ssl: process.env.ENVIROMENT === "local" ? false : { rejectUnauthorized: true, ca: SSL_CERT, },
     synchronize: process.env.SYNCRONIZE === "Y" ? true : false,
     bigNumberStrings: true,
-    entities: [User]
+    entities: [User, Favorite]
 }
 
 // Esto sirve para las Migraciones (Migrañas!!!!!)
@@ -27,7 +28,7 @@ const dataSourceOptionsMigrate: DataSourceOptions = {
     ssl: process.env.ENVIROMENT === "local" ? false : { rejectUnauthorized: true, ca: SSL_CERT, },
     synchronize: process.env.SYNCRONIZE === "Y" ? true : false,
     bigNumberStrings: true,
-    entities: [User],
+    entities: [User, Favorite],
     migrations: ['./src/db/migrations/*.ts'],
 }
 

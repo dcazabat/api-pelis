@@ -1,8 +1,6 @@
-import { AnimalTypesSeeder } from './animaltypes.seeder';
 import { DataSource } from 'typeorm';
 import { dataSourceOptions } from '../data-source';
 import { UserSeeder } from './user.seeder';
-import { AnimalFeaturesSeeder } from './animalfeatures.seeder';
 
 export const AppDataSource = new DataSource(dataSourceOptions);
 AppDataSource.initialize()
