@@ -1,6 +1,6 @@
 import { ApiProperty } from '@nestjs/swagger';
 import { Exclude } from 'class-transformer';
-import { UserRole } from '../user-role.enum';
+import { UserRole } from '../../common/decorators/user-role.enum';
 import { CommonDto } from '../../common/dto/common.dto';
 import { FavoriteDto } from '../../favorites/dto/favorite.dto';
 

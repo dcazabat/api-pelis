@@ -10,7 +10,7 @@ import { Pagination } from 'nestjs-typeorm-paginate';
 const entityName = 'Favorite';
 const itemxpega = 10;
 
-@ApiTags('Favorite')
+@ApiTags('Favoritas')
 @Controller('favorite')
 @ApiForbiddenResponse({ description: `${entityName} no autorizado` })
 @ApiBadRequestResponse({ description: 'Los datos enviados son incorrectos' })

@@ -6,13 +6,13 @@ import { UserDto } from './dto/user-dto';
 import { ApiBadRequestResponse, ApiBearerAuth, ApiBody, ApiCreatedResponse, ApiForbiddenResponse, ApiNotFoundResponse, ApiOkResponse, ApiQuery, ApiTags } from '@nestjs/swagger';
 import { AuthGuard } from '@nestjs/passport';
 import { Pagination } from 'nestjs-typeorm-paginate';
-import { UserRole } from './user-role.enum';
+import { UserRole } from '../common/decorators/user-role.enum';
 import { Roles } from '../common/decorators/roles.decorator';
 
 const entityName = 'Usuario';
 const itemxpega = 10;
 
-@ApiTags('Users')
+@ApiTags('Usuarios')
 @Controller('users')
 @ApiForbiddenResponse({ description: `${entityName} no autorizado` })
 @ApiBadRequestResponse({ description: 'Los datos enviados son incorrectos' })

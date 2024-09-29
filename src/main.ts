@@ -69,7 +69,7 @@ async function bootstrap() {
       .addServer('https://production.yourapi.com/', 'Production')
       .addTag('App Patitas', 'Endpoints Basicos de la Api')
       .addTag('Authentication', 'Endpoints de Autenticacion')
-      .addTag('Users', 'Endpoints de Manejo de Entidad Usuarios')
+      .addTag('Usuarios', 'Endpoints de Manejo de Entidad Usuarios')
       .addTag('Favoritas', 'Endpoints de Peliculas Favoritas')
       .addBearerAuth({
         // I was also testing it without prefix 'Bearer ' before the JWT

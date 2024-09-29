@@ -1,6 +1,6 @@
 import { CommonEntity } from '../../common/entities/common.entity';
 import { Entity, Column, OneToOne, OneToMany } from 'typeorm';
-import { UserRole } from '../user-role.enum';
+import { UserRole } from '../../common/decorators/user-role.enum';
 import { Favorite } from '../../favorites/entities/favorite.entity';
 
 @Entity('users')
